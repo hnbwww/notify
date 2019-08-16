@@ -8,7 +8,8 @@ import android.os.PowerManager;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.support.annotation.RequiresApi;
-
+import android.os.Bundle;
+import android.app.Notification;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
@@ -16,6 +17,7 @@ import monitor.mobie.hnb.im.database.AppinfosDatabase;
 import monitor.mobie.hnb.im.utils.ServerJiangUtils;
 import monitor.mobie.hnb.im.utils.ServerUrlUtils;
 import monitor.mobie.hnb.im.utils.WXUtils;
+
 
 /**
  * 在这里可以监听数据
@@ -29,6 +31,16 @@ public class NotificationCollectorService extends NotificationListenerService {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
+
+        Notification notification = sbn.getNotification();
+        String pkg = sbn.getPackageName();
+        if (notification == null) {
+            return;
+        }
+
+        Bundle extras = notification.extras;
+        if(extras==null)  return;
+
         SharedPreferences data = getSharedPreferences("data", Context.MODE_MULTI_PROCESS);
 //        SharedPreferences data = PreferenceManager.getDefaultSharedPreferences(this);
         String SCKEY = data.getString("SCKEY", "");
@@ -144,15 +156,16 @@ public class NotificationCollectorService extends NotificationListenerService {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void sendServerUrl(StatusBarNotification sbn, boolean listenAll, String PUSHURL,  String  PUSHURL_ID, String PUSHURL_KEY) {
         if (isAppNeedPush(sbn, listenAll)) {
+
             if (sbn.getNotification().extras.get("android.text") != null && sbn.getNotification().extras.get("android.title") != null) {
                 String text = sbn.getNotification().extras.get("android.text").toString();
                 String title = sbn.getNotification().extras.get("android.title").toString();
                 StringBuilder sb = new StringBuilder();
-                sb.append("## ").append(title).append("\r\n")
-                        .append("## ").append(text).append("\r\n");
+                sb.append("##").append(text).append("##");
                 ServerUrlUtils.send(PUSHURL, title, sb,PUSHURL_ID,PUSHURL_KEY);
-				
-				
+
+
+
             }
         }
     }	

@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.HashMap;
 
 /**
- * Created by hdy on 28/11/2018.
+ * Created by hnb on 28/11/2018.
  */
 
 public class AppinfosDatabase extends SQLiteOpenHelper {

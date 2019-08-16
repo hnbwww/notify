@@ -41,7 +41,7 @@
                         android:id="@+id/desc_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="点击打开教程和介绍" />
+                        android:text="点击查看" />
                 </LinearLayout>
 
                 <LinearLayout

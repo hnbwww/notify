@@ -12,23 +12,23 @@
         <EditTextPreference
             android:dependency="PUSHURL_enable"
             android:key="PUSHURL"
-            android:summary="输入通知URL"
-            android:title="PUSHURL" />
+            android:summary="通知将推送到该URL"
+            android:title="通知URL 必须http开头" />
 
         <EditTextPreference
             android:dependency="PUSHURL_enable"
             android:key="PUSHURL_ID"
             android:summary="用户ID"
-            android:title="PUSHURL_ID" />	
+            android:title="用户ID" />
 
         <EditTextPreference
             android:dependency="PUSHURL_enable"
             android:key="PUSHURL_KEY"
             android:summary="用户KEY"
-            android:title="PUSHURL_KEY" />				
+            android:title="用户KEY" />
 			
         <PreferenceScreen
-            android:key="PUSHURL_test"
+            android:key="push_test"
             android:title="推送测试"
             android:summary="点击这里进行测试"/>
 
@@ -85,16 +85,21 @@
     <PreferenceCategory android:title="关于">
         <Preference
             android:title="作者"
-            android:summary="恶搞大王"/>
+            android:summary="hnbwww"
+            ><intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://github.com/hnbwww/notify" />
+        </Preference>
+
         <Preference
             android:title="当前版本"
-            android:summary="3.0"/>
+            android:summary="1.8"/>
         <Preference
-            android:title="本程序完全免费开源"
-            android:summary="开源地址请点击这里"
+            android:title="使用说明"
+            android:summary="点击这里"
             ><intent
             android:action="android.intent.action.VIEW"
-            android:data="https://github.com/egdw/mobile_monitor_android_simple" />
+            android:data="https://github.com/hnbwww/notify" />
         </Preference>
     </PreferenceCategory>
 

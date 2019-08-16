@@ -20,7 +20,7 @@ import monitor.mobie.hnb.im.database.AppinfosDatabase;
 import monitor.mobie.hnb.im.model.AppInfo;
 
 /**
- * Created by hdy on 28/11/2018.
+ * Created by hnb on 28/11/2018.
  */
 
 public class AppInfosAdapter extends BaseAdapter {

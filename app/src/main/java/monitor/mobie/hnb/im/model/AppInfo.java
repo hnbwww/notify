@@ -3,7 +3,7 @@ package monitor.mobie.hnb.im.model;
 import android.graphics.drawable.Drawable;
 
 /**
- * Created by hdy on 28/11/2018.
+ * Created by hnb on 28/11/2018.
  *
  * @author egdw
  */

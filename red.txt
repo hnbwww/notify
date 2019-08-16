@@ -1,20 +1,20 @@
 将github上的代码库克隆到本地
 
-git clone git@github.com:hnbwww/notify.git
+git,clone,git@github.com:hnbwww/notify.git
 
 克隆成功的话在新建的文件夹内会有一个和github上的代码库重名的一个文件夹。
 
 在git命令行内输入以下代码：引号内的填写你注册github时的用户名和密码。
 
-git config --global user.name "hnbwww"
+git,config,--global,user.name,"hnbwww"
 
-git config --global user.email "hnbwww@qq.com"
+git,config,--global,user.email,"hnbwww@qq.com"
 
-还是在之前新建的文件夹内，右键git bash here，添加远程地址：
+还是在之前新建的文件夹内，右键git,bash,here，添加远程地址：
 
-git remote add origin git@github.com:https://github.com/hnbwww/notify.git
+git,remote,add,origin,git@github.com:https://github.com/hnbwww/notify.git
 
-git remote add origin 固定，后面的内容是复制网页上的ssh粘贴上去的
---------------------- 
-版权声明：本文为CSDN博主「蒲公英上的尘埃」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。
+git,remote,add,origin,固定，后面的内容是复制网页上的ssh粘贴上去的
+---------------------,
+版权声明：本文为CSDN博主「蒲公英上的尘埃」的原创文章，遵循CC,4.0,by-sa版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/loner_fang/article/details/80488385

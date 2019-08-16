@@ -15,7 +15,7 @@ import monitor.mobie.hnb.im.R;
 import monitor.mobie.hnb.im.database.AppinfosDatabase;
 
 /**
- * Created by hdy on 2019/2/18.
+ * Created by hnb on 2019/2/18.
  * 通知设置fragment
  */
 

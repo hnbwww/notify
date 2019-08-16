@@ -63,11 +63,12 @@ public class MainActivity extends AppCompatActivity {
         data = getSharedPreferences("data", MODE_MULTI_PROCESS);
         TabHost tabHost = (TabHost) findViewById(R.id.tabhost);
         tabHost.setup();
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("介绍", null).setContent(R.id.tab1));
         tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("推送设置", null).setContent(R.id.tab2));
         tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("通知设置", null).setContent(R.id.tab3));
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("使用说明", null).setContent(R.id.tab1));
+
         if (!isNotificationListenerServiceEnabled(this)) {
-            Toast.makeText(this, "请先勾选手机监听器的读取通知栏权限!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "请先勾选【通知推送】读取通知栏权限!", Toast.LENGTH_LONG).show();
             return;
         }
         Button button = (Button) findViewById(R.id.desc_button);
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                Uri uri = Uri.parse("https://github.com/egdw/mobile_monitor_android_simple/wiki");
+                Uri uri = Uri.parse("https://github.com/hnbwww/notify");
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setData(uri);
                 startActivity(intent);
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         if (!isNotificationListenerServiceEnabled(this)) {
             openNotificationAccess();
             toggleNotificationListenerService();
-            Toast.makeText(this, "请先勾选手机监听器的读取通知栏权限!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "请先勾选【通知推送】读取通知栏权限!", Toast.LENGTH_LONG).show();
             return;
         }
         if (applicationList != null && applicationList.getVisibility() == View.VISIBLE && applicationList.getAdapter() == null) {

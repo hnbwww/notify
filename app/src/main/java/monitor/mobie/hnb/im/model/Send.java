@@ -1,7 +1,7 @@
 package monitor.mobie.hnb.im.model;
 
 /**
- * Created by hdy on 2019/2/19.
+ * Created by hnb on 2019/2/19.
  * 用于企业wx发送信息
  */
 

@@ -7,7 +7,7 @@ import android.content.Intent;
 import monitor.mobie.hnb.im.service.MonitorService;
 
 /**
- * Created by hdy on 2017/9/10.
+ * Created by hnb on 2017/9/10.
  */
 
 public class BootBroadcastReciver extends BroadcastReceiver {

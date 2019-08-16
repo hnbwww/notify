@@ -32,6 +32,11 @@ public class ServerUrlUtils {
             @Override
             public void onFailure(Request request, IOException e) {
                 //如果请求失败了...
+                //TODO
+                OkHttpClient m1kHttpClient = new OkHttpClient();
+
+                m1kHttpClient.newCall(request);
+
             }
 
             @Override
@@ -43,7 +48,7 @@ public class ServerUrlUtils {
     }
 
     //用于测试
-    public static void sendTest(String PUSHURL, String title, StringBuilder sb,String PUSHURL_ID,String PUSHURL_KEY){
+    public static void sendTest(String PUSHURL, String PUSHURL_ID,String PUSHURL_KEY){
         //创建okHttpClient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
         //创建一个Request
